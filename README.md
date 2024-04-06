@@ -54,6 +54,19 @@ Pooling for global prediction: Gather all avaialable node or edge information to
 We want to produce a graph and then pass aggregated graph information into a classification layer that can output a prediction. 
 
 # Mode advanced GNNs
+To make more sophisticated GNNs we can utilize the connectivity of the graph. Within the GNN layer we can pass information from neighbouring nodes or edges using message passing. 
+This will influence the embeddings of the nodes or edges. 
+
+Message passing steps: 
+- for each node, gather all neighbouring node embeddings
+- Aggregate neighbouring node embeddings with for example SUM
+- The pooled messages are passes through and update function, usually a learned neural network.
+
+Message passing can be applied to either nodes or edges. Message passing is reminiscient of a standard convolution however allows for variable neighbourhood size. 
+We can stack message passing layers on top of eachother such that a node can receive information links away from it. If we stack three layers, a node will get information from it's neighbour, the neighbour's neighbour and the neighbour's neighbour's neighbour. 
+What we are learning is the MLP weights that transform the embeddings at eah step. That is the objective. 
+
+
 
 
 
