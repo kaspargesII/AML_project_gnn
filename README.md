@@ -13,8 +13,7 @@ https://arxiv.org/abs/2104.13478
 
 
 
-Notes for blog posts:
-https://distill.pub/2021/gnn-intro/
+#### Notes for blog post https://distill.pub/2021/gnn-intro/
 
 A neural network designed to leverage the structure of graphs.
 
@@ -70,6 +69,21 @@ Which graph attributes to update and in which order we update is a design decisi
 An issue with message passing is that far aaway nodes will never share information. We could use multiple Graph net layers but this becomes computationally expensive. 
 We can use the global representation of the graph to pass information far away. The global representation is connected to each node/edge. 
 We can concatenate the node information, adjacent nodes, adjacent edges and the global embedding and then aggregate across the concatenation. Our new graph representation will thus contain all the information of the graph. 
+
+### Notes for Paper about GNNs for EEG data: https://arxiv.org/abs/2310.02152
+
+GNNs are increasingly being used for EEG classification tasks: Among those neurological disease and disorder prediction. 
+THere is a prevalance of spectral over spatial GNN methods. 
+Standard forms of node features: Most popular being raw EEG signal and differential entropy. 
+
+We want to get away from manual feature extraction:  Automated feature extraction methods are needed to overcome these limitations, improve efficiency, reduce bias, and enhance classifier adaptability to different EEG datasets.
+CNNs and LSTM networks struggle to capture the dynamics of EEG signals and the temporal dependencies. 
+GNNs can capture the complex interactions amongst electrodes. 
+
+General GNN architechture for EEG graph classification, courtesy of Graph Neural Network-based EEG Classification: A Survey: 
+
+
+
 
 
 
