@@ -81,6 +81,8 @@ CNNs and LSTM networks struggle to capture the dynamics of EEG signals and the t
 GNNs can capture the complex interactions amongst electrodes. 
 
 General GNN architechture for EEG graph classification, courtesy of Graph Neural Network-based EEG Classification: A Survey: 
+![Screenshot 2024-04-06 at 21 03 14](https://github.com/kaspargesII/AML_project_gnn/assets/117733606/2d2801f1-458d-423b-9cd6-fcbacacfbb1b)
+
 
 
 
