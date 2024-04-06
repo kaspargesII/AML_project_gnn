@@ -85,13 +85,29 @@ GNNs can capture the complex interactions amongst electrodes.
 General GNN architechture for EEG graph classification, courtesy of Graph Neural Network-based EEG Classification: A Survey: 
 ![Screenshot 2024-04-06 at 21 03 14](https://github.com/kaspargesII/AML_project_gnn/assets/117733606/2d2801f1-458d-423b-9cd6-fcbacacfbb1b)
 
-Distinction between spatial and spectral GNNs:
+####Distinction between spatial and spectral GNNs:
 Spatial GNNs take information from neighbouring nodes much like traditional convolution. Stacking layers implies getting information from further away. 
 Spectral GNNS perform information aggregation in the graph frequency domain; low and high frequency components capture local and global information respectively. 
 Spectral GNNs are naturally connected to graph signal processing; however do not generalize well to large graphs as they depend on eigendecomposition of graph Laplacian. Spatial GNNs can applied on large graphs as they mostly 
 message pass locally, but may also have issues with over smoothin; all node embeddings becoming similar. Makes sense. 
 
 Spectral GNNs leverages spectral domain analysis of graph-structured data. Guess we have to figure out what that means lol. The eeg graph is transformed into the spectral domain using Graph Fourier Transform (GFT) and Graph Signal Processing. Need to do some linalg refresher, Laplacian eigendecomposition. The operations are computationally expensive, but Chebyshev GNN (ChebConv) is a useful approximation. Spectral GNNs rely on fixed number of nodes. This should be fine for our use case, as the number of electrodes is stable. 
+
+#### Brain graph structure
+The brain graph structure based on the eeg data can be manually defined or learned. Generally there are SC and FC approaches:
+SC:
+Typical connectivity is defined by a measure of distance of electrodes from one another. A threshold is used to cut off connections too far away. 
+This is invariant to the signal itself and thereby also noise of the signal. One issue is that the graph is limited to local structures. 
+We may insert global edges to combat this. 
+FC: 
+Determines connectivity of nodes by measuring degree of interaction. 
+May be learned 
+
+Choosing a brain graph representation depends o nthe task and data at hand. Each representation has its advantages and disadvantages. 
+
+#### Node feature representations
+Most common for time-domains is differential entropy and the raw signal as node features. 
+Differential entropy describes the complexity of a continuos variable and is the integral over the probabilit density function 
 
 
 
