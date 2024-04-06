@@ -65,6 +65,13 @@ Message passing steps:
 Message passing can be applied to either nodes or edges. Message passing is reminiscient of a standard convolution however allows for variable neighbourhood size. 
 We can stack message passing layers on top of eachother such that a node can receive information links away from it. If we stack three layers, a node will get information from it's neighbour, the neighbour's neighbour and the neighbour's neighbour's neighbour. 
 What we are learning is the MLP weights that transform the embeddings at eah step. That is the objective. 
+Which graph attributes to update and in which order we update is a design decision whe constructing GNNs: Open research area. 
+
+An issue with message passing is that far aaway nodes will never share information. We could use multiple Graph net layers but this becomes computationally expensive. 
+We can use the global representation of the graph to pass information far away. The global representation is connected to each node/edge. 
+We can concatenate the node information, adjacent nodes, adjacent edges and the global embedding and then aggregate across the concatenation. Our new graph representation will thus contain all the information of the graph. 
+
+
 
 
 
