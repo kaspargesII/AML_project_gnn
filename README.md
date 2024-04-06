@@ -108,6 +108,7 @@ Choosing a brain graph representation depends o nthe task and data at hand. Each
 #### Node feature representations
 Most common for time-domains is differential entropy and the raw signal as node features. 
 Differential entropy describes the complexity of a continuos variable and is the integral over the probabilit density function 
+![Screenshot 2024-04-06 at 21 03 14](https://github.com/kaspargesII/AML_project_gnn/assets/117733606/2d2801f1-458d-423b-9cd6-fcbacacfbb1b)
 
 
 
