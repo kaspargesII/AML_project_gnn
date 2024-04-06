@@ -13,7 +13,7 @@ https://arxiv.org/abs/2104.13478
 
 
 
-#### Notes for blog post https://distill.pub/2021/gnn-intro/
+### Notes for blog post https://distill.pub/2021/gnn-intro/
 
 A neural network designed to leverage the structure of graphs.
 
@@ -38,7 +38,7 @@ GNN defintion:
 A GNN is an optimizable transformation on all attributes of the graph (nodes, edges, global-context) that preserves graph symmetries (permutation invariances)
 GNNs take a graph as input and output a graph as well. They transform the embeddings on the node, edge and global level without altering the connectivity of the graph. 
 
-# Simple GNN
+##### Simple GNN
 Simple GNN: Has an MLP or another model on each component of the graph; a GNN Layer. For each node vector we apply the model and get back a learned node vector. We do the same for each edge and also for the global context vector. 
 The subsequent graph is now a new layer of the model. We can stack layers on top of each other. 
 Since the connectivity is unchanged the dimension of input and output matches. 
@@ -52,7 +52,7 @@ Pooling for global prediction: Gather all avaialable node or edge information to
 
 We want to produce a graph and then pass aggregated graph information into a classification layer that can output a prediction. 
 
-# Mode advanced GNNs
+##### Mode advanced GNNs
 To make more sophisticated GNNs we can utilize the connectivity of the graph. Within the GNN layer we can pass information from neighbouring nodes or edges using message passing. 
 This will influence the embeddings of the nodes or edges. 
 
