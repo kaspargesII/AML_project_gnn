@@ -42,6 +42,8 @@ GNN ex01 from lecture: https://colab.research.google.com/drive/1gBJgqfw1OXJ1qAT_
 data:
 https://torcheeg.readthedocs.io/en/latest/generated/torcheeg.datasets.SEEDDataset.html#torcheeg.datasets.SEEDDataset
 
+https://www.nature.com/articles/s41597-023-02650-w : https://www.synapse.org/#!Synapse:syn50614194/files/
+
 ### Notes for blog post https://distill.pub/2021/gnn-intro/
 
 A neural network designed to leverage the structure of graphs.
