@@ -5,8 +5,8 @@ Is a Spectral GNN is better than a Spatial GNN? Visualizations, Transfer learnin
 
 ## TODOs
 **Dataset**
--[ ] Find eeg dataset
--[ ] Data preprocessing
+-  [ ] Find eeg dataset
+-  [ ] Data preprocessing
 **Models**
 - [ ] Train GNN classifier
 - [ ] Train CNN classifier
