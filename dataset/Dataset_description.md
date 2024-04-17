@@ -1,0 +1,17 @@
+FACED: Finer-grained Affective Computing EEG Dataset
+
+
+
+# Summary 
+
+The present Finer-grained Affective Computing EEG Dataset (FACED) contains EEG signals from a cohort of 123 subjects who watched 28 emotion-elicitation video clips covering nine emotion categories. While the four negative emotions were chosen from Ekman’s six basic emotions, the four positive emotions were chosen based on the latest psychological and neuroscience progress as well as application needs: three out of the four positive emotions (inspiration, joy, and tenderness) have been suggested to be representative in recent neuroscience studies, and amusement is frequently reported in application scenarios such as the human-computer interactions. The sample size of over 100 subjects is expected to facilitate the cross-subject affective computing researches. The data were recorded using 32-channel EEGs. The subjective ratings for each video clip were obtained for all subjects, on the dimensions of the four negative and the four positive emotions, as well as arousal, valence, familiarity and liking. The FACED dataset is expected to promote the development of EEG-based affective computing algorithms for real-world applications.
+
+# Data Records
+
+The current dataset contains data records from 123 subjects. For each subject, we provide raw EEG data and event data in the “.bdf” file format, self-reported emotion ratings in the MATLAB “.mat” format, pre-processed EEG data in the Python “.pkl” format, DE and PSD features in the Python “.pkl” format. 
+
+# Experimental procedure
+
+During the experiment, subjects were seated about 60 cm from a 22-inch LCD monitor (Dell, USA). Experiments were conducted in a regular office room environment. At the beginning of each trial, subjects were instructed to focus on a fixation cross for 5 seconds, then watched a video clip. The sound of video clips was played by stereo speakers (Dell, USA). After each video clip, subjects were required to report their subjective emotional experiences during video-watching on 12 emotion items, including anger, fear, disgust, sadness, amusement, inspiration, joy, and tenderness, as well as valence, arousal, liking and familiarity. Subjects were asked to give their ratings on a continuous scale of 0-7 for each item and then rested for at least 30 seconds before starting the subsequent trial. Here, for the valence item, 0 indicated “very negative” and 7 indicated “very positive”. For the other items, 0 indicated “not at all” and 7 indicated “very much”. The meaning of the 12 emotional items was explained to the subjects before the experiment. To reduce the possible influence of alternating valence, every four trials containing video clips with the same valence (e.g., positive) were presented successively as a block. Therefore, there were three positive blocks, three negative blocks, and one neutral block. Between two blocks, subjects completed 20 arithmetic problems to minimize the influence of previous emotional states on the subsequent block. If subjects did not complete a specific problem in 4 seconds, the problem would be skipped and moved to the next problem. The orders of the video clips within each block and the seven blocks were randomized across subjects. Before the experiment, subjects performed one practice trial to get familiarized with the procedure. The experimental procedure was programmed with Psychophysics Toolbox 3.0 extensions in MATLAB (The Mathworks, USA). 
+
+
