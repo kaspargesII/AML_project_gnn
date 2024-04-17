@@ -14,6 +14,9 @@ Spectral GNN paper:
 https://arxiv.org/abs/2302.05631
 
 
+Code ressources:
+EEG preprocessing library with pytorch: https://github.com/torcheeg/torcheeg
+GNN ex01 from lecture: https://colab.research.google.com/drive/1gBJgqfw1OXJ1qAT_IbToaZDtGRy6gGzP
 
 ### Notes for blog post https://distill.pub/2021/gnn-intro/
 
