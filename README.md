@@ -18,6 +18,9 @@ Code ressources:
 EEG preprocessing library with pytorch: https://github.com/torcheeg/torcheeg
 GNN ex01 from lecture: https://colab.research.google.com/drive/1gBJgqfw1OXJ1qAT_IbToaZDtGRy6gGzP
 
+data:
+https://torcheeg.readthedocs.io/en/latest/generated/torcheeg.datasets.SEEDDataset.html#torcheeg.datasets.SEEDDataset
+
 ### Notes for blog post https://distill.pub/2021/gnn-intro/
 
 A neural network designed to leverage the structure of graphs.
