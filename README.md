@@ -1,3 +1,22 @@
+**Main goals:**
+Beat the CNN baseline, Evaluate the effect of preprocessing/aggregate functions, inter/intra subject generalizability 
+**Optional goals:**
+Is a Spectral GNN is better than a Spatial GNN? Visualizations, Transfer learning
+
+## TODOs
+**Dataset**
+-[ ] Find eeg dataset
+-[ ] Data preprocessing
+**Models**
+- [ ] Train GNN classifier
+- [ ] Train CNN classifier
+**Analysis**
+- [ ] Compare models
+- [ ] Evaluate the effect of preprocessing/aggregate functions
+- [ ] inter/intra subject generalizability
+- [ ] Optional goals
+
+
 #### Resources 
 
 Paper about GNNs for EEG data: https://arxiv.org/abs/2310.02152
