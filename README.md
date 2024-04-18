@@ -1,3 +1,24 @@
+**Main goals:**
+Beat the CNN baseline, Evaluate the effect of preprocessing/aggregate functions, inter/intra subject generalizability 
+**Optional goals:**
+Is a Spectral GNN is better than a Spatial GNN? Visualizations, Transfer learning
+
+## TODOs
+**Dataset**
+-  [ ] Find eeg dataset
+-  [ ] Data preprocessing
+
+**Models**
+- [ ] Train GNN classifier
+- [ ] Train CNN classifier
+      
+**Analysis**
+- [ ] Compare models
+- [ ] Evaluate the effect of preprocessing/aggregate functions
+- [ ] inter/intra subject generalizability
+- [ ] Optional goals
+
+
 #### Resources 
 
 Paper about GNNs for EEG data: https://arxiv.org/abs/2310.02152
@@ -14,6 +35,14 @@ Spectral GNN paper:
 https://arxiv.org/abs/2302.05631
 
 
+Code ressources:
+EEG preprocessing library with pytorch: https://github.com/torcheeg/torcheeg
+GNN ex01 from lecture: https://colab.research.google.com/drive/1gBJgqfw1OXJ1qAT_IbToaZDtGRy6gGzP
+
+data:
+https://torcheeg.readthedocs.io/en/latest/generated/torcheeg.datasets.SEEDDataset.html#torcheeg.datasets.SEEDDataset
+
+https://www.nature.com/articles/s41597-023-02650-w : https://www.synapse.org/#!Synapse:syn50614194/files/
 
 ### Notes for blog post https://distill.pub/2021/gnn-intro/
 
@@ -107,7 +136,44 @@ Choosing a brain graph representation depends o nthe task and data at hand. Each
 
 #### Node feature representations
 Most common for time-domains is differential entropy and the raw signal as node features. 
-Differential entropy describes the complexity of a continuos variable and is the integral over the probabilit density function 
+Differential entropy describes the complexity of a continuos variable:
+
+![Screenshot 2024-04-06 at 21 03 14](readme_figures/DE_equation.png)
+
+However many papers also defined node feature as the raw EEG signal. A limitation of this is that the signal may be too long to effectively process for the GNN. 
+Some preprocessing may therefore be done or we could use summary statistics such as the mean, median and standard deviation. 
+
+Frequency representations usually rely on Fourier Transform and are often quite low-dimensional making them easier to process.
+
+Graph theoretical features, like betweenness centrality can also be used. A limitation is that the brain graph needs to be known. 
+
+After choosing a node feature representation we may want to preprocess it by applying a CNN or MLP to reduce dimensionality and noise. 
+
+#### Types of Graph Convolutional Layers (GCN)
+ChebConv often utilized; although given the small size of the graphs it seems unwarranted. 
+Other than that, I am confused. 
+
+#### Node pooling for pruning graph
+Does not see much use in EEG. Might aid explainability but seems unnecessary given the small amount of nodes. 
+
+#### Node embeddings -> graph embeddings 😎😎😎
+Simplest approach is to concatenate all the node features. 
+However this makes it less generalizeable as we need the same number of nodes. 
+Also a lot of information may be redundant as it is represented in several of the node embeddings. 
+
+A readout function addresses many of the issues that come with concatenating node features. 
+The readout function can be any permutation invariant function applied over all the node embeddings. Common examples include sum, average and maximum. 
+Alternatively one could apply CNN style averaging or maximum pooling, node wise. That seems smart? 
+
+#### Discussion
+
+Many papers use the ChebConv or vanilla spatial GCN. There is no particular reason for this, it might just be because the EEG-GNN area is quite new. 
+Many papers struglle with generalizability because they use ChebConv or because they concatenate node embeddings for graph prediction. 
+This also means there is a lack of transfer learning which could be interesting to explore. Use of frequency band information could be used better as well.
+Integrate neuroscientific ideas into EEG-GNN modelling. 
+
+Nice paper. 
+
 
 
 
