@@ -1,3 +1,4 @@
 *.DS_Store
 /dataset/Processed_Data
 .venv
+/wandb
