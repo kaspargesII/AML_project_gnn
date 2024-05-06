@@ -1,5 +1,7 @@
+## Project description
 **Main goals:**
 Beat the CNN baseline, Evaluate the effect of preprocessing/aggregate functions, inter/intra subject generalizability
+
 **Optional goals:**
 Is a Spectral GNN is better than a Spatial GNN? Visualizations, Transfer learning
 
