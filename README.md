@@ -5,7 +5,7 @@ Beat the CNN baseline, Evaluate the effect of preprocessing/aggregate functions,
 **Optional goals:**
 Is a Spectral GNN is better than a Spatial GNN? Visualizations, Transfer learning
 
-#### Resources
+## Resources
 
 Paper about GNNs for EEG data: https://arxiv.org/abs/2310.02152
 syllabus: [M-PML], chapter 23.-23.2, 23.4
