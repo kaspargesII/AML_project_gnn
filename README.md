@@ -1,3 +1,8 @@
+### runnning the code
+
+The different architechtures can be found in the models folder. They were mostly trained on colab and depend on cuda etc. 
+Since the folder structure on colab is different to local env., the paths have to be modified a little bit. 
+
 ## Project description
 **Main goals:**
 Beat the CNN baseline, Evaluate the effect of preprocessing/aggregate functions, inter/intra subject generalizability
